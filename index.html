@@ -1,7 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+
+  <head>
+    <title>Heatmaps</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+    <!-- jsFiddle will insert css and js -->
+  </head>
+
+  <body>
+
+    <div id="map"></div>
+
+
+    <div class="knob-panel">
+  <div class="knob-container">
+    <div class="knob"></div>
+  </div>
+  <span class="percent">
+    20%
+  </span>
+  <div class="knob-container2">
+    <div class="knob2"></div>
+  </div>
+  <span class="percent2">
+    50%
+  </span>
+  <div class="knob-container3">
+    <div class="knob3"></div>
+  </div>
+  <span class="percent3">
+    0dB
+  </span>
+  
+  <div class="container" style="
+    max-width: 1600px;
+    margin: 0 auto;
+    background: #000;">
+
+    <canvas id="myChart" style="width: 1000px; height: 100px;"></canvas>
+
+  </div>
+</div>
+
+
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=visualization&v=weekly" defer></script>
+  </body>
+
+
 </html>
